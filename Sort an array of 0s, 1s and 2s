@@ -1,0 +1,25 @@
+class Solution
+{
+    public static void sort012(int a[], int n)
+    {
+        int left=0,right=n-1,mid=0,temp;
+        while(mid<=right){
+            if(a[mid]==0){
+                temp=a[left];
+                a[left]=a[mid];
+                a[mid]=temp;
+                left++;
+                mid++;
+            }
+            else if(a[mid]==2){
+                temp=a[mid];
+                a[mid]=a[right];
+                a[right]=temp;
+                right--;
+            }
+            else{
+                mid++;
+            }
+        }
+    }
+}
