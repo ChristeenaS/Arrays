@@ -1,0 +1,8 @@
+class Solution 
+{ 
+	static int[] SortBinaryArray(int arr[], int n) 
+	{ 
+	    Arrays.sort(arr);
+	    return arr;
+	} 
+} 
