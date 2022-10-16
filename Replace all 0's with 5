@@ -1,0 +1,16 @@
+### c++ code
+
+int convertFive(int n) {
+    int copy =n;
+       int digit=0;
+       int multiplier=1;
+       while(n>0){
+           digit=n%10;
+           if(digit==0){
+               copy +=multiplier*5;
+           }
+           multiplier=multiplier*10;
+           n=n/10;
+       }
+       return copy;
+}
