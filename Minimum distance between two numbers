@@ -1,0 +1,24 @@
+class Solution {
+    int minDist(int a[], int n, int x, int y) {
+        int indexX=0,indexY=0;
+        int ans=Integer.MAX_VALUE;
+        for(int i=0;i<n;i++){
+            if(a[i]==x){
+                indexX=i+1;
+            }
+            if(a[i]==y){
+                indexY=i+1;
+            }
+            if(indexX >0 && indexY >0){
+                int dist=Math.abs(indexX-indexY);
+                ans=Math.min(ans,dist);
+            }
+        }
+         if(indexX !=0 && indexY !=0){
+             return ans;
+         }
+         else{
+             return -1;
+         }
+    }
+}
